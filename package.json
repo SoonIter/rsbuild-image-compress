@@ -1,0 +1,27 @@
+{
+  "name": "rsbuild-latest-react-ts",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build": "rsbuild build",
+    "check": "biome check --write",
+    "dev": "rsbuild dev --open",
+    "format": "biome format --write",
+    "preview": "rsbuild preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@rsbuild/plugin-image-compress": "latest",
+    "@rsbuild/webpack": "1.0.1-beta.10",
+    "@biomejs/biome": "^1.8.3",
+    "@rsbuild/core": "1.0.1-beta.10",
+    "@rsbuild/plugin-react": "1.0.1-beta.10",
+    "@rsdoctor/rspack-plugin": "latest",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.5.2"
+  }
+}
