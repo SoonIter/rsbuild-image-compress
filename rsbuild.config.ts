@@ -1,11 +1,9 @@
 import { defineConfig } from '@rsbuild/core';
-import { pluginReact } from '@rsbuild/plugin-react';
-import { pluginImageCompress } from '@rsbuild/plugin-image-compress';
-import { webpackProvider } from '@rsbuild/webpack';
+// import { webpackProvider } from '@rsbuild/webpack';
 
 export default defineConfig({
-  provider: webpackProvider,
-  plugins: [pluginReact(), pluginImageCompress(['png'])],
+  // provider: webpackProvider,
+  plugins: [],
   tools: {
     bundlerChain(config, { isServer }) {
       config.module.rule('image').oneOf('image-asset').generator({
@@ -14,16 +12,10 @@ export default defineConfig({
       });
     },
     rspack: {
-      // plugins: [new RsdoctorRspackPlugin()],
       optimization: {
         chunkIds: 'named',
         moduleIds: 'named',
-        // minimize: false,
-      },
-      output: {
-        environment: {
-          const: false,
-        },
+        minimize: false,
       },
     },
   },
